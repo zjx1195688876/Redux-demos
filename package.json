@@ -4,11 +4,18 @@
   "description": "redux demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
     "url": "\u001b[A\u001b[B"
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "keywords": [
     "redux"
@@ -16,6 +23,12 @@
   "author": "zhangjinxin",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.0",
     "redux": "^3.6.0"
   }
 }

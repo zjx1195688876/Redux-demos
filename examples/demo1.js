@@ -1,4 +1,4 @@
-const Redux = require('redux');
+import Redux from 'redux';
 
 // actions
 const INCREMENT = 'INCREMENT';
