@@ -7,12 +7,13 @@ import express from 'express';
 const app = new express();
 const port = 3000;
 let __dirname;
-
 let compiler = webpack(config);
+
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
 }));
+
 app.use(webpackHotMiddleware(compiler));
 
 app.get('/', function(req, res) {
